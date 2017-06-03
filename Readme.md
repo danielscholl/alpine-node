@@ -12,18 +12,18 @@ The script _build.sh_ will build the docker image. Arguments can be passed to th
 
 Default Versions
 
-- NODE_VERSION=6.10.1
-- NPM_VERSION=4.3.0
+- NODE_VERSION=7.2.0
+- NPM_VERSION=5.0.2
 
 __COMMAND__
 ```
-$ ./build.sh 6.10.1 4.3.0
+$ ./build.sh 7.2.0 5.0.2
 ```
 
 Run Example
 -------
 
 ```
-  $ docker run irvui/alpine-node:6.10.1 node --version
-  $ docker run irvui/alpine-node:6.10.1 npm --version
+  $ docker run irvui/alpine-node:7.2.0 node --version
+  $ docker run irvui/alpine-node:7.2.0 npm --version
 ```

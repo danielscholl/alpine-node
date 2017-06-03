@@ -1,7 +1,7 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
-ARG NODE_VERSION=v6.10.1
-ARG NPM_VERSION=4.3.0
+ARG NODE_VERSION=7.2.0
+ARG NPM_VERSION=5.0.2
 ENV VERSION=$NODE_VERSION NPM_VERSION=$NPM_VERSION CONFIG_FLAGS="--fully-static" DEL_PKGS="libgcc libstdc++" RM_DIRS=/usr/include
 
 
@@ -36,5 +36,6 @@ RUN apk add --no-cache curl make gcc g++ binutils-gold python linux-headers paxc
   fi && \
   apk del curl make gcc g++ binutils-gold python linux-headers paxctl gnupg ${DEL_PKGS} && \
   rm -rf /etc/ssl /node-${VERSION}.tar.gz /SHASUMS256.txt.asc /node-${VERSION} ${RM_DIRS} \
-    /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp /root/.gnupg \
+    /usr/share/man /tmp/* /var/cache/apk/* /root/.npm \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html
+  # rm -rf /root/.gnupg

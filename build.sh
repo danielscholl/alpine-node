@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ##### Constants
-NODE_VERSION=6.10.1
-NPM_VERSION=4.3.0
+NODE_VERSION=7.2.0
+NPM_VERSION=5.0.2
 
 
 if [ "$1" ]
